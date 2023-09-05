@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DTextinator/static/css/main.073c9b0a.css",
-    "main.js": "/DTextinator/static/js/main.4da8d7a9.js",
+    "main.js": "/DTextinator/static/js/main.a6fb7d0d.js",
     "static/js/787.4a77f3b8.chunk.js": "/DTextinator/static/js/787.4a77f3b8.chunk.js",
     "index.html": "/DTextinator/index.html",
     "main.073c9b0a.css.map": "/DTextinator/static/css/main.073c9b0a.css.map",
-    "main.4da8d7a9.js.map": "/DTextinator/static/js/main.4da8d7a9.js.map",
+    "main.a6fb7d0d.js.map": "/DTextinator/static/js/main.a6fb7d0d.js.map",
     "787.4a77f3b8.chunk.js.map": "/DTextinator/static/js/787.4a77f3b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.4da8d7a9.js"
+    "static/js/main.a6fb7d0d.js"
   ]
 }
