@@ -28,7 +28,7 @@ export default function TextForm(props) {
         props.showAlert('Cleared Text','success ')
     }
     const handleRemoveSCClick= () => {
-        const pattern = /[!~@#$`%>^&;*(<)?{|}<://]/g;
+        const pattern = /[!~@#$`%>_^&;*<?{+|}<://]/g;
         let newText = text.replace(pattern, '');
         setText(newText);
         props.showAlert('Removed Special Characters','success ')
