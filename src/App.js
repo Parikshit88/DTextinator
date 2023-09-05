@@ -21,7 +21,7 @@ function App() {
   })
   setTimeout(() => {
     setAlert(null);
-  }, 1000);
+  }, 1500);
   }
 
 
@@ -43,13 +43,13 @@ function App() {
 return (
     <>
     {/* <Router> */}
-    <Navbar title="Textinator" mode={mode} toggleMode={toggleMode}/>
+    <Navbar title="DTextinator" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
     {/* <Routes> */}
       {/* <Route exact path="/about" element={<About />}>
       </Route> */}
-      <TextForm showAlert = {showAlert} heading="Input your text" mode={mode}/>
+      <TextForm showAlert = {showAlert} heading='DTextinator - Text Manipulator, Word Counter, Character Counter' mode={mode}/>
       {/* }> */}
       {/* </Route> */}
     {/* </Routes> */}
