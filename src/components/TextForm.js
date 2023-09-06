@@ -27,6 +27,10 @@ export default function TextForm(props) {
         setText(newText);
         props.showAlert('Cleared Text','success ')
     }
+    const handleCopy = () => {
+        navigator.clipboard.writeText(text); 
+        props.showAlert("Copied to Clipboard!", "success");
+    }
     const handleRemoveSCClick= () => {
         const pattern = /[!~@#$`%>_^&;*<?{+|}<://]/g;
         let newText = text.replace(pattern, '');
@@ -42,11 +46,12 @@ export default function TextForm(props) {
         <div className="mb-3">
             <textarea className="form-control" value={text} onChange={handleOnChange} style = {{backgroundColor: props.mode==='dark'?'#343a40':'white',color: props.mode==='dark'?'white':'#343a40', borderStyle: 'dashed', borderColor: props.mode==='dark'?'white':'#343a40', borderWidth: "medium"}} id="myBox" rows="12"></textarea>        
         </div>
-        <button disabled={text.length===0}className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleUpperCaseClick}>Convert to Uppercase</button>
-        <button disabled={text.length===0}className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleLowerCaseClick}>Convert to Lowercase</button>
-        <button disabled={text.length===0}className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleClearClick}>Clear Text</button>
-        <button disabled={text.length===0}className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleRESClick}>Remove Extra Spaces</button>
-        <button disabled={text.length===0}className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleRemoveSCClick}>Remove Special Characters</button>
+        <button disabled={text.length===0} className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleUpperCaseClick}>Convert to Uppercase</button>
+        <button disabled={text.length===0} className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleLowerCaseClick}>Convert to Lowercase</button>
+        <button disabled={text.length===0} className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleClearClick}>Clear Text</button>
+        <button disabled={text.length===0} className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleCopy}>Copy Text</button>
+        <button disabled={text.length===0} className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleRESClick}>Remove Extra Spaces</button>
+        <button disabled={text.length===0} className="btn btn-secondary mx-2 my-1" style = {{backgroundColor: props.mode==='dark'?'white':'#343a40',color: props.mode==='dark'?'#343a40':'white', cursor: 'pointer'}} onClick={handleRemoveSCClick}>Remove Special Characters</button>
 
   </div>
     <div className="container my-3" style={{color: props.mode==='dark'?'white':'#343a40'}}>
